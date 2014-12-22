@@ -1,4 +1,6 @@
-## The function below is a getter setter - defining both the obkect (matrix and
+## 
+
+## The function below is a getter setter - defining both the object (matrix and
 ##it's inverse), and the methods to get those or set those.
 
 makeCacheMatrix <- function(x = matrix()) {
