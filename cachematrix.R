@@ -1,7 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## The function below is a getter setter - defining both the obkect (matrix and
+##it's inverse), and the methods to get those or set those.
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -11,7 +9,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 inv <<- NULL
         }
         get <- function() x
-        setinv <- function(solve) inv <<- inverse
+        setinv <- function(solve) inv <<- solve
         getinv <- function() inv
         list(set = set, get = get,
              setinv = setinv,
@@ -21,7 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function will return the inversed matrix if already exists. 
+## Otherwise, it will inverse (solve) it, used the object created by the above
+##function to set the inversed matrix as the cached value, and return the inverse. 
 
 cacheSolve <- function(x, ...) {
         
@@ -40,4 +40,3 @@ cacheSolve <- function(x, ...) {
         
         
         ## Return a matrix that is the inverse of 'x'
-}
